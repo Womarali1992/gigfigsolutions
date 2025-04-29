@@ -1,7 +1,5 @@
-
 import React from "react";
 import { Globe, Code, Zap, Settings } from "lucide-react";
-
 interface ServiceCardProps {
   title: string;
   price: string;
@@ -9,26 +7,26 @@ interface ServiceCardProps {
   icon: React.ReactNode;
   delay: string;
 }
-
-const ServiceCard = ({ title, price, description, icon, delay }: ServiceCardProps) => {
-  return (
-    <div 
-      className="backdrop-blur-md bg-white/30 border border-white/40 shadow-lg rounded-xl p-6 md:p-8 flex flex-col h-full animate-fade-in hover:bg-white/40 transition-all duration-300"
-      style={{ animationDelay: delay }}
-    >
+const ServiceCard = ({
+  title,
+  price,
+  description,
+  icon,
+  delay
+}: ServiceCardProps) => {
+  return <div style={{
+    animationDelay: delay
+  }} className="backdrop-blur-md border border-white/40 shadow-lg p-6 md:p-8 flex flex-col h-full animate-fade-in transition-all duration-300 bg-[gigfig-dark-purple] bg-transparent rounded-3xl">
       <div className="bg-gigfig-blue/20 p-3 rounded-full w-fit mb-4 backdrop-blur-sm">
         {icon}
       </div>
       <h3 className="text-xl font-semibold mb-2 text-gigfig-dark-text">{title}</h3>
       <p className="text-sm text-gigfig-dark-purple font-medium mb-3">Starting at {price}</p>
       <p className="text-gigfig-dark-text/80 flex-grow">{description}</p>
-    </div>
-  );
+    </div>;
 };
-
 const Services = () => {
-  return (
-    <section id="services" className="py-20 md:py-28">
+  return <section id="services" className="py-20 md:py-28 bg-slate-100 bg-[gigfig-light-blue]">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center">What We Offer</h2>
         <p className="section-subtitle text-center">
@@ -36,38 +34,12 @@ const Services = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          <ServiceCard
-            title="Simple Websites"
-            price="$500"
-            description="Clean, professional websites designed to showcase your business and help you connect with customers."
-            icon={<Globe className="h-6 w-6 text-gigfig-blue" />}
-            delay="0.1s"
-          />
-          <ServiceCard
-            title="Custom Software"
-            price="$5,000"
-            description="Scalable platforms and applications built to address your specific business challenges."
-            icon={<Code className="h-6 w-6 text-gigfig-blue" />}
-            delay="0.2s"
-          />
-          <ServiceCard
-            title="Automation & Support"
-            price="Custom Quote"
-            description="Save time and reduce manual work with smart tools that streamline your operations."
-            icon={<Zap className="h-6 w-6 text-gigfig-blue" />}
-            delay="0.3s"
-          />
-          <ServiceCard
-            title="Custom Solutions"
-            price="Custom Quote"
-            description="Integrations and systems built around your workflow to maximize efficiency."
-            icon={<Settings className="h-6 w-6 text-gigfig-blue" />}
-            delay="0.4s"
-          />
+          <ServiceCard title="Simple Websites" price="$500" description="Clean, professional websites designed to showcase your business and help you connect with customers." icon={<Globe className="h-6 w-6 text-gigfig-blue" />} delay="0.1s" />
+          <ServiceCard title="Custom Software" price="$5,000" description="Scalable platforms and applications built to address your specific business challenges." icon={<Code className="h-6 w-6 text-gigfig-blue" />} delay="0.2s" />
+          <ServiceCard title="Automation & Support" price="Custom Quote" description="Save time and reduce manual work with smart tools that streamline your operations." icon={<Zap className="h-6 w-6 text-gigfig-blue" />} delay="0.3s" />
+          <ServiceCard title="Custom Solutions" price="Custom Quote" description="Integrations and systems built around your workflow to maximize efficiency." icon={<Settings className="h-6 w-6 text-gigfig-blue" />} delay="0.4s" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;
