@@ -13,10 +13,10 @@ interface ServiceCardProps {
 const ServiceCard = ({ title, price, description, icon, delay }: ServiceCardProps) => {
   return (
     <div 
-      className="glass-card rounded-xl p-6 md:p-8 flex flex-col h-full animate-fade-in"
+      className="backdrop-blur-md bg-white/30 border border-white/40 shadow-lg rounded-xl p-6 md:p-8 flex flex-col h-full animate-fade-in hover:bg-white/40 transition-all duration-300"
       style={{ animationDelay: delay }}
     >
-      <div className="bg-gigfig-blue/10 p-3 rounded-full w-fit mb-4">
+      <div className="bg-gigfig-blue/20 p-3 rounded-full w-fit mb-4 backdrop-blur-sm">
         {icon}
       </div>
       <h3 className="text-xl font-semibold mb-2 text-gigfig-dark-text">{title}</h3>
