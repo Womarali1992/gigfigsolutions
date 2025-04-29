@@ -13,7 +13,7 @@ const features = [
 
 const WhyGigfig = () => {
   return (
-    <section id="why-gigfig" className="py-20 md:py-28 bg-gradient-to-b from-white/0 to-white/30">
+    <section id="why-gigfig" className="py-20 md:py-28">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center">Why Gigfig?</h2>
         <p className="section-subtitle text-center">
