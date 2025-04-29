@@ -1,6 +1,5 @@
-
 import React, { useState, useRef, useEffect } from "react";
-import { Building, Shield, Briefcase, Home } from "lucide-react";
+import { Building, Briefcase, DollarSign } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -20,20 +19,15 @@ const categories: CategoryOption[] = [
     icon: <Building className="h-6 w-6" />,
   },
   {
-    id: "insurance",
-    label: "Insurance Broker",
-    icon: <Shield className="h-6 w-6" />,
-  },
-  {
     id: "business",
     label: "Business Broker",
     icon: <Briefcase className="h-6 w-6" />,
   },
   {
-    id: "mortgage",
-    label: "Mortgage Broker",
-    icon: <Home className="h-6 w-6" />,
-  },
+    id: "capital",
+    label: "Capital Broker",
+    icon: <DollarSign className="h-6 w-6" />,
+  }
 ];
 
 interface CategorySelectorProps {
@@ -129,7 +123,7 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
                       "glass-card flex flex-col items-center justify-center w-32 h-32 p-4 rounded-xl cursor-pointer transition-all duration-300 snap-center",
                       "hover:scale-105 hover:shadow-lg hover:border-white/40",
                       selectedCategory === category.id
-                        ? "bg-gradient-to-b from-gigfig-blue/80 to-gigfig-purple/80 text-white border-white/40 font-medium shadow-lg"
+                        ? "bg-gradient-to-b from-gigfig-green/80 to-gigfig-purple/80 text-white border-white/40 font-medium shadow-lg"
                         : "bg-white/30 border-white/20 text-gigfig-dark-text"
                     )}
                   >
@@ -138,7 +132,7 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
                         "p-2 rounded-full mb-2 transition-colors",
                         selectedCategory === category.id
                           ? "text-white"
-                          : "text-gigfig-dark-text/60 group-hover:text-gigfig-blue"
+                          : "text-gigfig-dark-text/60 group-hover:text-gigfig-green"
                       )}
                     >
                       {React.cloneElement(category.icon as React.ReactElement, {

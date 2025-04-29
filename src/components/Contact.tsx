@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -55,7 +54,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="bg-white/50 border-white/30 focus:border-gigfig-blue"
+                    className="bg-white/50 border-white/30 focus:border-gigfig-green"
                     required
                   />
                 </div>
@@ -70,7 +69,7 @@ const Contact = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="bg-white/50 border-white/30 focus:border-gigfig-blue"
+                    className="bg-white/50 border-white/30 focus:border-gigfig-green"
                     required
                   />
                 </div>
@@ -84,7 +83,7 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="bg-white/50 border-white/30 focus:border-gigfig-blue min-h-[120px]"
+                    className="bg-white/50 border-white/30 focus:border-gigfig-green min-h-[120px]"
                     required
                   />
                 </div>

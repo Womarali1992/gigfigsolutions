@@ -1,4 +1,3 @@
-
 import React from "react";
 import { CheckCircle } from "lucide-react";
 
@@ -8,7 +7,16 @@ const features = [
   "Systems built to grow with your business",
   "Simple, transparent pricing with no surprises",
   "Dedicated support every step of the way",
-  "Focus on delivering real business value"
+  "Focus on delivering real business value",
+  "Automated lead capture from email, chat, web forms, and ads",
+  "Quick setup with no new hires required",
+  "Low-cost service: one-time setup fee plus a small subscription",
+  "Lead conversion engine that screens, scores, and prioritizes prospects",
+  "CRM integration included—works seamlessly with your systems",
+  "Fast launch and effortless use—go live in days, not weeks",
+  "Scalable, long-term solution that grows with you",
+  "Save on ad spend by capturing more leads",
+  "Spend less time on admin and more time closing deals"
 ];
 
 const WhyGigfig = () => {

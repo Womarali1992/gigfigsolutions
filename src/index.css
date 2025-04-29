@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
 
 @tailwind base;
@@ -7,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 230 60% 98%;
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -16,56 +15,56 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 224 83% 56%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
 
-    --secondary: 270 91% 37%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
 
-    --accent: 270 91% 37%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 210 20% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 224 83% 56%;
+    --ring: 142.1 76.2% 36.3%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --foreground: 210 20% 98%;
 
     --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card-foreground: 210 20% 98%;
 
     --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover-foreground: 210 20% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
 
     --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 210 20% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
     --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 210 20% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 210 20% 98%;
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 142.1 76.2% 36.3%;
   }
 }
 
@@ -79,9 +78,9 @@
   }
 
   body {
-    @apply text-foreground font-sans;
+    @apply bg-background text-foreground font-sans;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #d3e4fd 0%, #e5deff 100%);
+    background: linear-gradient(135deg, #86efac 0%, #a855f7 100%);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -95,7 +94,7 @@
   }
   
   .glass-button {
-    @apply bg-gigfig-blue/80 hover:bg-gigfig-blue text-white backdrop-blur-sm transition-all duration-300 shadow-md hover:shadow-lg;
+    @apply bg-gigfig-green/80 hover:bg-gigfig-green text-white backdrop-blur-sm transition-all duration-300 shadow-md hover:shadow-lg;
   }
   
   .section-title {
@@ -112,7 +111,7 @@
   }
   
   .category-pill-selected {
-    @apply backdrop-blur-lg bg-gradient-to-b from-gigfig-blue/80 to-gigfig-purple/70 border-white/40;
+    @apply backdrop-blur-lg bg-gradient-to-b from-emerald-400/80 to-emerald-500/70 border-white/40;
   }
 
   .category-pill-hover {

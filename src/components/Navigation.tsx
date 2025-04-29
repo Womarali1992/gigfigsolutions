@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AlignJustify, X } from "lucide-react";
@@ -16,7 +15,9 @@ const Navigation = () => {
     <nav className="bg-transparent py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="font-bold text-2xl text-gigfig-dark-text">Gigfig</span>
+          <span className="font-bold text-2xl">
+            <span className="text-gigfig-green">Gig</span><span className="text-gigfig-purple">fig</span>
+          </span>
         </Link>
 
         {/* Mobile menu button */}
@@ -32,31 +33,31 @@ const Navigation = () => {
         <div className="hidden md:flex items-center space-x-8">
           <Link
             to="/"
-            className="text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors"
           >
             Home
           </Link>
           <Link
-            to="/broker-dashboard"
-            className="text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+            to="/#broker-services"
+            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors"
           >
-            Broker Dashboard
+            Broker Services
           </Link>
           <Link
             to="/#services"
-            className="text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors"
           >
             Services
           </Link>
           <Link
             to="/#why-gigfig"
-            className="text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors"
           >
             Why Gigfig
           </Link>
           <Link
             to="/#contact"
-            className="text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors"
           >
             Contact
           </Link>
@@ -81,35 +82,35 @@ const Navigation = () => {
             <Link
               to="/"
               onClick={toggleMenu}
-              className="text-lg text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+              className="text-lg text-gigfig-dark-text hover:text-gigfig-green transition-colors"
             >
               Home
             </Link>
             <Link
-              to="/broker-dashboard"
+              to="/#broker-services"
               onClick={toggleMenu}
-              className="text-lg text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+              className="text-lg text-gigfig-dark-text hover:text-gigfig-green transition-colors"
             >
-              Broker Dashboard
+              Broker Services
             </Link>
             <Link
               to="/#services"
               onClick={toggleMenu}
-              className="text-lg text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+              className="text-lg text-gigfig-dark-text hover:text-gigfig-green transition-colors"
             >
               Services
             </Link>
             <Link
               to="/#why-gigfig"
               onClick={toggleMenu}
-              className="text-lg text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+              className="text-lg text-gigfig-dark-text hover:text-gigfig-green transition-colors"
             >
               Why Gigfig
             </Link>
             <Link
               to="/#contact"
               onClick={toggleMenu}
-              className="text-lg text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+              className="text-lg text-gigfig-dark-text hover:text-gigfig-green transition-colors"
             >
               Contact
             </Link>
