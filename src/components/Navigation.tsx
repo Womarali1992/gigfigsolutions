@@ -1,37 +1,123 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { AlignJustify, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 animate-fade-in">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center">
-          <Link to="/" className="text-2xl font-bold text-gigfig-dark-purple">
-            Gigfig
+    <nav className="bg-transparent py-4">
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        <Link to="/" className="flex items-center space-x-2">
+          <span className="font-bold text-2xl text-gigfig-dark-text">Gigfig</span>
+        </Link>
+
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden text-gigfig-dark-text"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <AlignJustify size={24} />}
+        </button>
+
+        {/* Desktop navigation */}
+        <div className="hidden md:flex items-center space-x-8">
+          <Link
+            to="/"
+            className="text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+          >
+            Home
           </Link>
-        </div>
-        <div className="hidden md:flex space-x-6 text-sm font-medium">
-          <a href="#services" className="text-gigfig-dark-text hover:text-gigfig-purple transition-colors">
+          <Link
+            to="/broker-dashboard"
+            className="text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+          >
+            Broker Dashboard
+          </Link>
+          <Link
+            to="/#services"
+            className="text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+          >
             Services
-          </a>
-          <a href="#why-gigfig" className="text-gigfig-dark-text hover:text-gigfig-purple transition-colors">
+          </Link>
+          <Link
+            to="/#why-gigfig"
+            className="text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+          >
             Why Gigfig
-          </a>
-          <a href="#contact" className="text-gigfig-dark-text hover:text-gigfig-purple transition-colors">
+          </Link>
+          <Link
+            to="/#contact"
+            className="text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+          >
             Contact
-          </a>
+          </Link>
+          <Button className="glass-button">Get Started</Button>
         </div>
-        <div>
-          <a href="#contact">
-            <Button className="glass-button">
-              Get Started
-            </Button>
-          </a>
+
+        {/* Mobile menu */}
+        <div
+          className={cn(
+            "fixed inset-y-0 right-0 transform w-64 bg-white/95 backdrop-blur-md shadow-lg z-40 transition-transform duration-300 ease-in-out md:hidden",
+            isOpen ? "translate-x-0" : "translate-x-full"
+          )}
+        >
+          <div className="flex flex-col p-8 space-y-6">
+            <button
+              onClick={toggleMenu}
+              className="self-end text-gigfig-dark-text mb-6"
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
+            <Link
+              to="/"
+              onClick={toggleMenu}
+              className="text-lg text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+            >
+              Home
+            </Link>
+            <Link
+              to="/broker-dashboard"
+              onClick={toggleMenu}
+              className="text-lg text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+            >
+              Broker Dashboard
+            </Link>
+            <Link
+              to="/#services"
+              onClick={toggleMenu}
+              className="text-lg text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+            >
+              Services
+            </Link>
+            <Link
+              to="/#why-gigfig"
+              onClick={toggleMenu}
+              className="text-lg text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+            >
+              Why Gigfig
+            </Link>
+            <Link
+              to="/#contact"
+              onClick={toggleMenu}
+              className="text-lg text-gigfig-dark-text hover:text-gigfig-blue transition-colors"
+            >
+              Contact
+            </Link>
+            <Button className="glass-button w-full">Get Started</Button>
+          </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 };
 
