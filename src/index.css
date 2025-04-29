@@ -105,4 +105,17 @@
   .section-subtitle {
     @apply text-xl text-gigfig-dark-text/80 mb-10 max-w-3xl mx-auto;
   }
+
+  /* New glassmorphism styles for category selector */
+  .category-pill {
+    @apply backdrop-blur-lg bg-white/30 border border-white/20 transition-all;
+  }
+  
+  .category-pill-selected {
+    @apply backdrop-blur-lg bg-gradient-to-b from-gigfig-blue/80 to-gigfig-purple/70 border-white/40;
+  }
+
+  .category-pill-hover {
+    @apply hover:shadow-xl hover:scale-105 hover:bg-white/50 hover:border-white/40;
+  }
 }
