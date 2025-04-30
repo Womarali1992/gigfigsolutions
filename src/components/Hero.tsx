@@ -7,10 +7,11 @@ const Hero = () => {
     <section className="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-br from-white/40 to-transparent">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gigfig-dark-text mb-6 animate-fade-in">
-            Get On-Demand Assistance <br />
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gigfig-dark-text mb-6 animate-fade-in">
+            Get <span className="underline decoration-4 decoration-gigfig-green/30">On-Demand</span> Assistance
+            <br />
             <span className="bg-clip-text bg-gradient-to-r from-emerald-500 to-gigfig-purple text-transparent">
-              From Our A.I. Assistants
+              From Our <span className="underline decoration-4 decoration-gigfig-purple/30">A.I. Assistants</span>
             </span>
           </h1>
           <div 
