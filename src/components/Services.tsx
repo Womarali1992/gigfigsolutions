@@ -24,7 +24,10 @@ const Services = () => {
                 <Sparkles className="h-10 w-10 text-gigfig-green" />
               </div>
               <h3 className="text-5xl font-bold text-gigfig-purple mb-2">Gig</h3>
-              <h4 className="text-xl font-semibold text-gigfig-dark-text mb-3">Custom AI Assistance,<br />Ready When You Are</h4>
+              <div className="text-xl font-semibold text-gigfig-dark-text mb-3">
+                <div>24/7 Concierge</div>
+                <div>Communication</div>
+              </div>
             </div>
             <div className="w-full h-1 bg-gradient-to-r from-gigfig-purple/50 to-emerald-500/50 mb-4"></div>
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -43,7 +46,10 @@ const Services = () => {
                 <Zap className="h-10 w-10 text-gigfig-green" />
               </div>
               <h3 className="text-5xl font-bold text-gigfig-purple mb-2">Fig</h3>
-              <h4 className="text-xl font-semibold text-gigfig-dark-text mb-3">Free Your Time.<br />Focus Your Energy.</h4>
+              <div className="text-xl font-semibold text-gigfig-dark-text mb-3">
+                <div>Client Intake &</div>
+                <div>Profile Setup</div>
+              </div>
             </div>
             <div className="w-full h-1 bg-gradient-to-r from-gigfig-purple/50 to-emerald-500/50 mb-4"></div>
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -62,7 +68,10 @@ const Services = () => {
                 <Rocket className="h-10 w-10 text-gigfig-green" />
               </div>
               <h3 className="text-5xl font-bold text-gigfig-purple mb-2">Solutions</h3>
-              <h4 className="text-xl font-semibold text-gigfig-dark-text mb-3">Long-Term Support,<br />Simple Monthly Fee</h4>
+              <div className="text-xl font-semibold text-gigfig-dark-text mb-3">
+                <div>Long-Term Support,</div>
+                <div>Simple Monthly Fee</div>
+              </div>
             </div>
             <div className="w-full h-1 bg-gradient-to-r from-gigfig-purple/50 to-emerald-500/50 mb-4"></div>
             <p className="text-lg text-gray-600 leading-relaxed">
