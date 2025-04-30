@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -10,7 +9,7 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gigfig-dark-text mb-6 animate-fade-in">
             Quick Easy Set Up, <br />
-            <span className="bg-clip-text bg-gradient-to-r from-gigfig-green to-gigfig-purple text-transparent">
+            <span className="bg-clip-text bg-gradient-to-r from-emerald-500 to-gigfig-purple text-transparent">
               Long term AI assistance
             </span>
           </h1>
@@ -27,7 +26,7 @@ const Hero = () => {
             style={{ animationDelay: "0.4s" }}
           >
             <a href="#services">
-              <Button className="glass-button px-8 py-6 text-base rounded-full shadow-md hover:shadow-lg transition-all">
+              <Button className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-6 text-base rounded-full shadow-md hover:shadow-lg transition-all">
                 Explore Our Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
