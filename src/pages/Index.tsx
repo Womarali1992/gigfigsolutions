@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
@@ -9,7 +10,7 @@ import BrokerSection from "@/components/BrokerSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-white/10 to-transparent">
       <Navigation />
       <main>
         <Hero />

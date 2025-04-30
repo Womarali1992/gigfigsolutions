@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AlignJustify, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,13 +7,34 @@ import { cn } from "@/lib/utils";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-transparent py-4">
+    <nav 
+      className={cn(
+        "fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300",
+        scrolled ? "bg-white/70 backdrop-blur-md shadow-md" : "bg-transparent"
+      )}
+    >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
           <span className="font-bold text-2xl">
@@ -30,38 +52,38 @@ const Navigation = () => {
         </button>
 
         {/* Desktop navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           <Link
             to="/"
-            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors"
+            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors font-medium"
           >
             Home
           </Link>
-          <Link
-            to="/#broker-services"
-            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors"
+          <a
+            href="/#broker-services"
+            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors font-medium"
           >
             Broker Services
-          </Link>
-          <Link
-            to="/#services"
-            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors"
+          </a>
+          <a
+            href="/#services"
+            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors font-medium"
           >
             Services
-          </Link>
-          <Link
-            to="/#why-gigfig"
-            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors"
+          </a>
+          <a
+            href="/#why-gigfig"
+            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors font-medium"
           >
             Why Gigfig
-          </Link>
-          <Link
-            to="/#contact"
-            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors"
+          </a>
+          <a
+            href="/#contact"
+            className="text-gigfig-dark-text hover:text-gigfig-green transition-colors font-medium"
           >
             Contact
-          </Link>
-          <Button className="glass-button">Get Started</Button>
+          </a>
+          <Button className="glass-button rounded-full px-6">Get Started</Button>
         </div>
 
         {/* Mobile menu */}
@@ -86,35 +108,35 @@ const Navigation = () => {
             >
               Home
             </Link>
-            <Link
-              to="/#broker-services"
+            <a
+              href="/#broker-services"
               onClick={toggleMenu}
               className="text-lg text-gigfig-dark-text hover:text-gigfig-green transition-colors"
             >
               Broker Services
-            </Link>
-            <Link
-              to="/#services"
+            </a>
+            <a
+              href="/#services"
               onClick={toggleMenu}
               className="text-lg text-gigfig-dark-text hover:text-gigfig-green transition-colors"
             >
               Services
-            </Link>
-            <Link
-              to="/#why-gigfig"
+            </a>
+            <a
+              href="/#why-gigfig"
               onClick={toggleMenu}
               className="text-lg text-gigfig-dark-text hover:text-gigfig-green transition-colors"
             >
               Why Gigfig
-            </Link>
-            <Link
-              to="/#contact"
+            </a>
+            <a
+              href="/#contact"
               onClick={toggleMenu}
               className="text-lg text-gigfig-dark-text hover:text-gigfig-green transition-colors"
             >
               Contact
-            </Link>
-            <Button className="glass-button w-full">Get Started</Button>
+            </a>
+            <Button className="glass-button w-full rounded-full">Get Started</Button>
           </div>
         </div>
       </div>

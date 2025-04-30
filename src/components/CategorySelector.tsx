@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from "react";
 import { Building, Briefcase, DollarSign } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -93,11 +94,11 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/40 backdrop-blur-sm border-white/30 shadow-md"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/60 backdrop-blur-sm border-white/40 shadow-md hover:bg-white/80"
               onClick={scrollLeft}
               aria-label="Scroll left"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="15 18 9 12 15 6" />
               </svg>
             </Button>
@@ -108,7 +109,7 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
             className="w-full overflow-x-auto pb-4"
           >
             <div 
-              className="flex space-x-4 snap-x snap-mandatory px-10 md:px-0 md:justify-center"
+              className="flex space-x-6 snap-x snap-mandatory px-10 md:px-0 md:justify-center"
               style={{ scrollSnapType: 'x mandatory' }}
             >
               {categories.map((category, index) => (
@@ -120,31 +121,31 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
                     ref={(el) => (pillRefs.current[index] = el)}
                     htmlFor={`category-${category.id}`}
                     className={cn(
-                      "glass-card flex flex-col items-center justify-center w-32 h-32 p-4 rounded-xl cursor-pointer transition-all duration-300 snap-center",
-                      "hover:scale-105 hover:shadow-lg hover:border-white/40",
+                      "glass-card flex flex-col items-center justify-center w-36 h-36 p-5 rounded-2xl cursor-pointer transition-all duration-300 snap-center",
+                      "hover:scale-105 hover:shadow-lg hover:border-white/50",
                       selectedCategory === category.id
-                        ? "bg-gradient-to-b from-gigfig-green/80 to-gigfig-purple/80 text-white border-white/40 font-medium shadow-lg"
-                        : "bg-white/30 border-white/20 text-gigfig-dark-text"
+                        ? "bg-gradient-to-b from-gigfig-green/80 to-gigfig-purple/60 text-white border-white/50 font-medium shadow-lg"
+                        : "bg-white/40 border-white/30 text-gigfig-dark-text hover:bg-white/60"
                     )}
                   >
                     <div
                       className={cn(
-                        "p-2 rounded-full mb-2 transition-colors",
+                        "p-3 rounded-full mb-3 transition-colors",
                         selectedCategory === category.id
-                          ? "text-white"
-                          : "text-gigfig-dark-text/60 group-hover:text-gigfig-green"
+                          ? "bg-white/20 text-white"
+                          : "bg-white/50 text-gigfig-dark-text/70 group-hover:text-gigfig-green"
                       )}
                     >
                       {React.cloneElement(category.icon as React.ReactElement, {
                         className: cn(
-                          "h-8 w-8 transition-all",
+                          "h-9 w-9 transition-all",
                           selectedCategory === category.id
                             ? "text-white" 
-                            : "text-gigfig-dark-text/60"
+                            : "text-gigfig-dark-text/70"
                         ),
                       })}
                     </div>
-                    <span className="text-sm text-center line-clamp-2">
+                    <span className="text-sm font-medium text-center line-clamp-2">
                       {category.label}
                     </span>
                     <RadioGroupItem
@@ -163,11 +164,11 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
             <Button
               variant="outline"
               size="icon"
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/40 backdrop-blur-sm border-white/30 shadow-md"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 rounded-full bg-white/60 backdrop-blur-sm border-white/40 shadow-md hover:bg-white/80"
               onClick={scrollRight}
               aria-label="Scroll right"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="9 18 15 12 9 6" />
               </svg>
             </Button>
