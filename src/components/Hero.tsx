@@ -8,9 +8,9 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gigfig-dark-text mb-6 animate-fade-in">
-            Quick Easy Set Up, <br />
+            Get On-Demand Assistance <br />
             <span className="bg-clip-text bg-gradient-to-r from-emerald-500 to-gigfig-purple text-transparent">
-              Long term AI assistance
+              From Our A.I. Assistants
             </span>
           </h1>
           <div 
@@ -18,7 +18,7 @@ const Hero = () => {
             style={{ animationDelay: "0.2s" }}
           >
             <p className="text-lg md:text-xl text-gigfig-dark-text/90">
-              Build the future - one gig at a time 
+              Skip the Hiring. Your AI Assistant Is Ready Now.
             </p>
           </div>
           <div 
