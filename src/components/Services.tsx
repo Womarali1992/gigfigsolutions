@@ -25,13 +25,13 @@ const Services = () => {
               </div>
               <h3 className="text-5xl font-bold text-gigfig-purple mb-2">Gig</h3>
               <div className="text-xl font-semibold text-gigfig-dark-text mb-3">
-                <div>24/7 Concierge</div>
-                <div>Communication</div>
+                <div>One-Time Setup,</div>
+                <div>Seamless Integration</div>
               </div>
             </div>
             <div className="w-full h-1 bg-gradient-to-r from-gigfig-purple/50 to-emerald-500/50 mb-4"></div>
             <p className="text-lg text-gray-600 leading-relaxed">
-              We build AI assistants tailored to specific tasks—always on standby to handle the busy work, so you can focus on what matters most.
+              We handle the full setup—analyzing your systems and embedding the AI assistant directly into your existing workflow. No disruption, no confusion—just a frictionless addition that works from day one.
             </p>
           </div>
           
@@ -47,13 +47,13 @@ const Services = () => {
               </div>
               <h3 className="text-5xl font-bold text-gigfig-purple mb-2">Fig</h3>
               <div className="text-xl font-semibold text-gigfig-dark-text mb-3">
-                <div>Client Intake &</div>
-                <div>Profile Setup</div>
+                <div>All-in-One Automation,</div>
+                <div>Zero Ongoing Headaches</div>
               </div>
             </div>
             <div className="w-full h-1 bg-gradient-to-r from-gigfig-purple/50 to-emerald-500/50 mb-4"></div>
             <p className="text-lg text-gray-600 leading-relaxed">
-              We seamlessly integrate AI into your workflow—giving you back time and headspace to grow your business without distractions.
+              Our AI assistant keeps solving your recurring tasks without requiring constant input, maintenance, or rising costs. One solution, always running—so you stay focused on growth, not management.
             </p>
           </div>
           
@@ -69,13 +69,13 @@ const Services = () => {
               </div>
               <h3 className="text-5xl font-bold text-gigfig-purple mb-2">Solutions</h3>
               <div className="text-xl font-semibold text-gigfig-dark-text mb-3">
-                <div>Long-Term Support,</div>
-                <div>Simple Monthly Fee</div>
+                <div>Custom AI Tools,</div>
+                <div>Built for Your Business</div>
               </div>
             </div>
             <div className="w-full h-1 bg-gradient-to-r from-gigfig-purple/50 to-emerald-500/50 mb-4"></div>
             <p className="text-lg text-gray-600 leading-relaxed">
-              A scalable solution that keeps your assistant running reliably—so your business stays lean, focused, and built for growth.
+              We go beyond plug-and-play. Need something tailored? We design purpose-built automations and custom workflows to match exactly how your business operates—no compromises.
             </p>
           </div>
         </div>

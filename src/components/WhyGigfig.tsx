@@ -3,32 +3,36 @@ import { CheckCircle } from "lucide-react";
 
 const features = [
   {
-    title: "Save Money on Ad Spend",
-    description: "Capture and convert more leads automatically—so your ad dollars go further."
+    title: "Stretch Your Budget Further",
+    description: "Auto-posting, follow-ups, and round-the-clock lead capture help convert more clicks into customers, squeezing extra value from every marketing dollar."
   },
   {
-    title: "Never Miss a Lead Again",
-    description: "Instant AI follow-up means fewer cold leads and more closed deals."
+    title: "Instant Lead Response",
+    description: "AI chat and SMS sequences greet prospects the moment they reach out, keeping interest hot and reducing the chance of leads going cold."
   },
   {
-    title: "Better Client Engagement",
-    description: "Stay in touch with personalized, timely communication across every channel."
+    title: "Personalized Engagement at Scale",
+    description: "Unified customer data plus smart templates deliver emails, texts, and DMs that read like you wrote them yourself—boosting open rates and loyalty without extra effort."
   },
   {
-    title: "Less Admin, More Closings",
-    description: "Free up hours of repetitive work so you can focus on what you do best."
+    title: "Paperwork on Cruise Control",
+    description: "Invoices, contracts, and slide decks generate, file, and track themselves so you can focus on revenue-driving tasks instead of admin chores."
   },
   {
-    title: "Smarter Lead Qualification",
-    description: "AI filters, scores, and routes inquiries to the right place—no more wasted calls."
+    title: "Reliable, Real-Time Data",
+    description: "Live sync wipes out duplicates and stale records, ensuring every report and dashboard reflects up-to-the-minute reality."
   },
   {
-    title: "Launch Fast, Scale Seamlessly",
-    description: "No new hires, no heavy systems. Get started in days and grow at your pace."
+    title: "Faster Deal Flow",
+    description: "AI scores, routes, and books meetings before competitors can even hit 'reply,' shortening your sales cycle and keeping momentum high."
   },
   {
-    title: "Simple, Transparent Pricing",
-    description: "No surprises. Just clear, value-driven plans built for growing businesses."
+    title: "Launch Fast, Grow Smoothly",
+    description: "Plug-and-play workflows fit right into your existing tools today and expand effortlessly as your business scales tomorrow."
+  },
+  {
+    title: "Clear, Growth-Friendly Pricing",
+    description: "Straightforward plans you can budget for confidently—no hidden fees, just predictable costs tied to tangible value."
   }
 ];
 
