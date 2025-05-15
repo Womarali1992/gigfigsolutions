@@ -8,11 +8,8 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gigfig-dark-text mb-6 animate-fade-in">
-            <span className="underline decoration-4 decoration-gigfig-green/30">On-Demand</span> Assistance
-            <br />
-            <span className="bg-clip-text bg-gradient-to-r from-emerald-500 to-gigfig-purple text-transparent">
-              From Our <span className="underline decoration-4 decoration-gigfig-purple/30">A.I. Assistants</span>
-            </span>
+            <span className="bg-clip-text bg-gradient-to-r from-emerald-500 to-gigfig-purple text-transparent">Less Work</span>, <span className="bg-clip-text bg-gradient-to-r from-emerald-500 to-gigfig-purple text-transparent">More Results</span><br />
+            with Gig Fig Business <span className="bg-clip-text bg-gradient-to-r from-emerald-500 to-gigfig-purple text-transparent">Automations</span>
           </h1>
           <div 
             className="glass-card p-6 md:p-8 rounded-xl max-w-3xl mx-auto mb-10 animate-fade-in shadow-lg" 
